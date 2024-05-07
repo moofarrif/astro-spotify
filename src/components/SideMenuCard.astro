@@ -16,8 +16,11 @@ const artistString = artists.join(', ');
   <picture class="h-12 w-12 flex-none">
     <img
       src={cover}
+      width="48px"
+      height="48px"
+      srcset=`${cover} 300w, ${cover} 900w, ${cover} 1800w`
       alt={`Cover of the playlist ${title} by ${artistString}`}
-      class="object-cover w-full h-full rounded-md"
+      class="object-cover w-full h-full rounded-md"   
     />
   </picture>
 
