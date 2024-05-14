@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import type { Playlist } from '@/lib/data';
 
 interface Props {
@@ -14,13 +15,14 @@ const artistString = artists.join(', ');
   href={`/playlist/${id}`}
   class="playlist-item flex relative p-2 overflow-hidden items-center gap-5 rounded-md hover:bg-zinc-500">
   <picture class="h-12 w-12 flex-none">
-    <img
+    <Image
       src={cover}
-      width="48px"
-      height="48px"
+      width="48"
+      height="48"
       srcset=`${cover} 300w, ${cover} 900w, ${cover} 1800w`
       alt={`Cover of the playlist ${title} by ${artistString}`}
-      class="object-cover w-full h-full rounded-md"   
+      class="object-cover w-full h-full rounded-md"
+      loading={'eager'}
     />
   </picture>
 
