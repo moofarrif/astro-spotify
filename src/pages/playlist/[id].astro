@@ -1,5 +1,6 @@
 ---
 // import MusicsTable from "@/components/MusicsTable.astro"
+import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
 // import { CardPlayButton } from "@/components/CardPlayButton"
 import { allPlaylists, songs } from '@/lib/data';
@@ -19,8 +20,10 @@ const playListSongs = songs.filter(song => song.albumId === playlist?.albumId);
 
     <header class="flex flex-row gap-8 px-6 mt-12">
       <picture class="aspect-square w-52 h-52 flex-none">
-        <img
-          src={playlist?.cover}
+        <Image
+          width={208}
+          height={208}
+          src={playlist?.cover!}
           alt={`Cover of ${playlist?.title}`}
           class="object-cover w-full h-full shadow-lg"
           transition:name=`playlist ${playlist?.id} image`
