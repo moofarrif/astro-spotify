@@ -45,6 +45,7 @@ export const MusicsTablePlay = ({ song }) => {
   const className = 'hover:scale-125';
   return (
     <button
+      aria-label="Play / Pause"
       className="text-white"
       onClick={() => handleClick(song)}>
       {isCurrentSongRunning(song) ? <Pause className={className} /> : <Play className={className} />}

@@ -1,42 +1,46 @@
 ---
-import HomeIcon from '../icons/Home.astro'
-import SearchIcon from '../icons/Search.astro'
-import LibraryIcon from '../icons/Library.astro'
+import HomeIcon from '../icons/Home.astro';
+import SearchIcon from '../icons/Search.astro';
+import LibraryIcon from '../icons/Library.astro';
 
-import SideMenuItem from '../components/SideMenuItem.astro'
-import SideMenuCard from '../components/SideMenuCard.astro'
+import SideMenuItem from '../components/SideMenuItem.astro';
+import SideMenuCard from '../components/SideMenuCard.astro';
 
-import { playlists, favourites } from '../lib/data'
+import { playlists, favourites } from '../lib/data';
 ---
 
 <nav class="flex flex-col flex-1 gap-2">
   <div class="bg-zinc-900 rounded-lg p-2">
     <ul>
-      <SideMenuItem href="/">
-        <HomeIcon />
-        Home
-      </SideMenuItem>
-
-      <SideMenuItem href="/#">
-        <SearchIcon />
-        Search
-      </SideMenuItem>
+      <li>
+        <SideMenuItem href="/">
+          <HomeIcon />
+          Home
+        </SideMenuItem>
+      </li>
+      <li>
+        <SideMenuItem href="/#">
+          <SearchIcon />
+          Search
+        </SideMenuItem>
+      </li>
     </ul>
   </div>
 
   <div class="bg-zinc-900 rounded-lg p-2 flex-1">
     <ul>
-      <SideMenuItem href="/#">
-        <LibraryIcon />
-        Your library
-      </SideMenuItem>
-
-      {
-        playlists.map(playlist => <SideMenuCard playlist={playlist} />)
-      }
-      {
-        favourites.map(favourite => <SideMenuCard playlist={favourite} />)
-      }
+      <li>
+        <SideMenuItem href="/#">
+          <LibraryIcon />
+          Your library
+        </SideMenuItem>
+      </li>
+      <li>
+        {playlists.map(playlist => <SideMenuCard playlist={playlist} />)}
+      </li>
+      <li>
+        {favourites.map(favourite => <SideMenuCard playlist={favourite} />)}
+      </li>
     </ul>
   </div>
 </nav>

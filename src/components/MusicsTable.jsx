@@ -43,6 +43,7 @@ export const MusicsTable = ({ songs }) => {
                   <img
                     src={song.image}
                     alt={song.title}
+                    sizes=''
                     className="w-11 h-11"
                   />
                 </picture>

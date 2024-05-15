@@ -41,7 +41,7 @@ const PlayerControl = ({ audio }) => {
   };
 
   const formatTime = time => {
-    if (isNaN(time)) return ''
+    if (isNaN(time)) return '';
     if (time == null) return '0:00';
 
     const seconds = Math.floor(time % 60);
@@ -91,6 +91,7 @@ const VolumeControl = () => {
   return (
     <div className="flex justify-center gap-x-2 text-white">
       <button
+        aria-label="Volume"
         className="opacity-70 hover:opacity-100 transition"
         onClick={handleClickVolume}>
         {isVolumeSilenced ? (
@@ -203,6 +204,7 @@ export function Player() {
         <div className="flex flex-col items-center justify-center">
           <div className="flex gap-8">
             <button
+              aria-label="Previus song"
               title="Prev"
               onClick={onPrevSong}>
               <Prev />
@@ -210,17 +212,20 @@ export function Player() {
             <button
               title="Play / Pause"
               className="bg-white rounded-full p-2"
-              onClick={handleClick}>
+              onClick={handleClick}
+              aria-label="Play/Pause">
               {isPlaying ? <Pause /> : <Play />}
             </button>
             <button
               onClick={onNextSong}
-              title="Next">
+              title="Next"
+              aria-label="Next song">
               <Next />
             </button>
             <button
               onClick={handleRepeatSong}
-              title="Loop">
+              title="Loop"
+              aria-label="Loop song">
               {isOnRepeat ? <Loop /> : <NoLoop />}
             </button>
           </div>
