@@ -7,7 +7,7 @@ import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), svelte(), react()],
+  integrations: [tailwind(), svelte(), react()], // delete module svelte
   output: 'server',
   adapter: vercel()
 });

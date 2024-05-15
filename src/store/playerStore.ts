@@ -12,6 +12,7 @@ export interface PlayerStore {
   isOnRepeat: boolean;
   currentMusic: CurrentMusic;
   volume: number;
+
   setVolume: (volume: number) => void;
   setIsPlaying: (isPlaying: boolean) => void;
   setCurrentMusic: (currentMusic: CurrentMusic) => void;

@@ -92,21 +92,22 @@ const { title, description } = Astro.props;
         />
       </footer>
     </div>
-  </body><style>
-    #app {
-      display: grid;
-      grid-template-areas:
-        'aside main'
-        'player player';
-      grid-template-columns: 350px 1fr;
-      grid-template-rows: 1fr auto;
-    }
-  </style>
-  <style is:global>
-    html {
-      font-family: 'Onest Variable', system-ui, sans-serif;
-      background: #010101;
-      color: #eee;
-    }
-  </style>
+    <style>
+      #app { 
+        display: grid;
+        grid-template-areas:
+          'aside main'
+          'player player';
+        grid-template-columns: 350px 1fr;
+        grid-template-rows: 1fr auto;
+      }
+    </style>
+    <style is:global>
+      html {
+        font-family: 'Onest Variable', system-ui, sans-serif;
+        background: #010101;
+        color: #eee;
+      }
+    </style>
+  </body>
 </html>
