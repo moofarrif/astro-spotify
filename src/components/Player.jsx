@@ -62,7 +62,7 @@ const PlayerControl = ({ audio }) => {
         className="w-[400px]"
         onValueChange={value => {
           const [newCurrentTime] = value;
-          audio.current.currentTime = newCurrentTime;
+          audio.current.currentTime = newCurrentTime || 0;
         }}
       />
 
