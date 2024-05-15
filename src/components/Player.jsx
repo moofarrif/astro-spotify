@@ -18,7 +18,7 @@ const CurrentSong = ({ image, title, artists }) => {
       )}
 
       <div className="flex flex-col">
-        <h3 className="font-semibold text-sm block">{title}</h3>
+        <h1 className="font-semibold text-sm block">{title}</h1>
         <span className="text-xs opacity-80">{artists?.join(', ')}</span>
       </div>
     </div>

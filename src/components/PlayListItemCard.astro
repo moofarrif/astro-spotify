@@ -40,16 +40,15 @@ const artistsString = artists.join(', ');
     </picture>
 
     <div class="flex flex-auto flex-col">
-      <h4
+      <h1
         class="text-white text-sm"
         transition:name=`playlist ${id} title`>
         {title}
-      </h4>
-      <span
+      </h1>
+      <p
         class="text-gray-400 text-xs"
         transition:name=`playlist ${id} artists`
-        >{artistsString}</span
-      >
+        >{artistsString}</p>
     </div>
   </a>
 </article>
