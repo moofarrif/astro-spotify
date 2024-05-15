@@ -5,11 +5,11 @@
   let greeting = ""
 
   if (currentHour < 12) {
-    greeting = "Buenos días"
+    greeting = "Good morning"
   } else if (currentHour < 18) {
-    greeting = "Buenas tardes"
+    greeting = "Good afternoon"
   } else {
-    greeting = "Buenas noches"
+    greeting = "Good evening"
   }
 </script>
 
