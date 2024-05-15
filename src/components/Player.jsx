@@ -33,14 +33,14 @@ export function Player() {
     if (isPlaying) {
       audioRef.current.pause();
     } else {
-      audioRef.current.src = `/public/music/1/01.mp3`;
+      audioRef.current.src = `/music/1/01.mp3`;
       audioRef.current.play();
       audioRef.current.volume = 0.1;
     }
   };
 
   React.useEffect(() => {
-    audioRef.current.src = `/public/music/1/01.mp3`;
+    audioRef.current.src = `/music/1/01.mp3`;
 
   
   }, []);
