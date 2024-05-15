@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro'
 import { CardPlayButton } from '../../components/CardPlayButton'
 import { allPlaylists, songs } from '../../lib/data'
-import { MusicsTable } from '../../components/MusicsTable.tsx'
+import { MusicsTable } from '../../components/MusicsTable.jsx'
 
 const { id } = Astro.params
 
@@ -10,7 +10,7 @@ const playlist = allPlaylists.find((playlist) => playlist.id === id)
 const playListSongs = songs.filter(song => song.albumId === playlist?.albumId)
 ---
 
-<Layout title="Listen to your favourite music.">
+<Layout title="Listen to your favourite music." description='una descripcion'>
 	<div
     id="playlist-container"
     class="relative flex flex-col h-full bg-zinc-900 overflow-x-hidden bg-gradient-to-t from-50% from-zinc-900 via-zinc-900/80"

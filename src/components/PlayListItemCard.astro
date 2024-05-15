@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { playlist } = Astro.props
-const { id, cover, title, artists, color } = playlist
+const { id, cover, title, artists } = playlist
 const artistsString = artists.join(", ")
 ---
 <article class="group relative bg-zinc-500/30 hover:bg-zinc-800 shadow-lg hover:shadow-xl rounded-md transition-all duration-300">
