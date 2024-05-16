@@ -42,13 +42,13 @@ export const MusicsTablePlay = ({ song }) => {
     setIsPlaying(true);
   };
 
-  const className = 'hover:scale-125';
+  const className = 'hover:scale-125 fill-current ';
   return (
     <button
       aria-label="Play / Pause"
       className="text-white"
       onClick={() => handleClick(song)}>
-      {isCurrentSongRunning(song) ? <Pause className={className} /> : <Play className={className} />}
+      {isCurrentSongRunning(song) ? <Pause className={className} size={12} /> : <Play className={className} size={12} />}
     </button>
   );
 };
